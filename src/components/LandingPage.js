@@ -7,13 +7,17 @@ import { Typography } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import { Link } from 'react-router-dom';
 
-import Link from '../src/Link';
-import CallToAction from '../src/components/CallToAction';
+import CallToAction from './CallToAction';
+import ButtonArrow from '../ui/ButtonArrow';
+import animationData from '../animations/landinganimation/data';
+import customSoftwareIcon from '../assets/Custom_Software_Icon.svg';
+import mobileAppsIcon from '../assets/mobileIcon.svg';
+import websitesIcon from '../assets/websiteIcon.svg';
+import revolutionBackground from '../assets/repeatingBackground.svg';
+import infoBackground from '../assets/infoBackground.svg';
 
-import ButtonArrow from '../src/ui/ButtonArrow';
-
-import animationData from '../src/animations/landinganimation/data';
 
 const useStyles = makeStyles(theme => ({
   animation: {
@@ -90,7 +94,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   revolutionBackground: {
-    backgroundImage: `url('/assets/repeatingBackground.svg')`,
+    backgroundImage: `url(${revolutionBackground})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -112,7 +116,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   infoBackground: {
-    backgroundImage: `url('/assets/infoBackground.svg')`,
+    backgroundImage: `url(${infoBackground})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -146,12 +150,12 @@ export default (props) => {
             </Typography>
             <Grid container justify='center' className={classes.buttonContainer}>
               <Grid item>
-                <Button className={classes.estimateButton} variant='contained' component={Link} href='/estimate' onClick={() => props.setValue(5)}>
+                <Button className={classes.estimateButton} variant='contained' component={Link} to='/estimate' onClick={() => props.setValue(5)}>
                   Free Estimate
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant='outlined' className={classes.learnButtonHero} component={Link} href='/revolution' onClick={() => props.setValue(2)}>
+                <Button variant='outlined' className={classes.learnButtonHero} component={Link} to='/revolution' onClick={() => props.setValue(2)}>
                   <span style={{ marginRight: 10 }}>Learn More</span>
                   <ButtonArrow width={15} height={15} fill={theme.palette.common.arcBlue} />
                 </Button>
@@ -178,14 +182,14 @@ export default (props) => {
             <Button
               variant='outlined'
               className={classes.learnButton}
-              component={Link} href='/customsoftware'
+              component={Link} to='/customsoftware'
               onClick={() => { props.setValue(1); props.setSelectedIndex(1)}}>
               <span style={{ marginRight: 10 }}>Learn More</span>
               <ButtonArrow width={10} height={10} fill={theme.palette.common.arcBlue} />
             </Button>
           </Grid>
           <Grid item>
-            <img className={classes.icon} alt='custom software icon' src='/assets/Custom_Software_Icon.svg' />
+            <img className={classes.icon} alt='custom software icon' src={customSoftwareIcon} />
           </Grid>
         </Grid>
       </Grid>
@@ -206,7 +210,7 @@ export default (props) => {
               variant='outlined'
               className={classes.learnButton}
               component={Link}
-              href='/mobileapps'
+              to='/mobileapps'
               onClick={() => { props.setValue(1); props.setSelectedIndex(2); }}>
               >
               <span style={{ marginRight: 10 }}>Learn More</span>
@@ -214,7 +218,7 @@ export default (props) => {
             </Button>
           </Grid>
           <Grid item style={{ marginRight: matchesSM ? 0 : '5em' }} >
-            <img className={classes.icon} alt='mobile device icon' src='/assets/mobileIcon.svg' />
+            <img className={classes.icon} alt='mobile device icon' src={mobileAppsIcon} />
           </Grid>
         </Grid>
       </Grid>
@@ -234,7 +238,7 @@ export default (props) => {
               variant='outlined'
               className={classes.learnButton}
               component={Link}
-              href='/websites'
+              to='/websites'
               onClick={() => { props.setValue(1); props.setSelectedIndex(3); }}>
               >
               <span style={{ marginRight: 10 }}>Learn More</span>
@@ -242,7 +246,7 @@ export default (props) => {
             </Button>
           </Grid>
           <Grid item>
-            <img className={classes.icon} alt='website development icon' src='/assets/website.svg' />
+            <img className={classes.icon} alt='website development icon' src={websitesIcon} />
           </Grid>
         </Grid>
       </Grid>
@@ -264,7 +268,7 @@ export default (props) => {
                     variant='outlined'
                     className={classes.learnButtonHero}
                     component={Link}
-                    href='/revolution'
+                    to='/revolution'
                     onClick={() => { props.setValue(2) }}
                   >
                     <span style={{ marginRight: 10 }}>Learn More</span>
@@ -298,7 +302,7 @@ export default (props) => {
                     variant='outlined'
                     className={classes.learnButton}
                     style={{ color: 'white', borderColor: 'white' }}
-                    component={Link} href='/about'
+                    component={Link} to='/about'
                     onClick={() => props.setValue(3)}
                   >
                     <span style={{ marginRight: 10 }}>Learn More</span>
@@ -321,7 +325,7 @@ export default (props) => {
                     variant='outlined'
                     className={classes.learnButton}
                     style={{ color: 'white', borderColor: 'white' }}
-                    component={Link} href='/contact'
+                    component={Link} to='/contact'
                     onClick={() => props.setValue(4)}
                   >
                     <span style={{ marginRight: 10 }}>Learn More</span>

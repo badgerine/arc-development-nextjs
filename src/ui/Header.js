@@ -252,7 +252,9 @@ export default function Header(props) {
         <AppBar position='fixed' className={classes.appBar}>
           <Toolbar disableGutters>
             <Button disableRipple component={Link} to='/' className={classes.logoContainer} onClick={() => props.setValue(0)}>
-              <img className={classes.logo} alt="company logo" src={logo} />
+              <img className={classes.logo} alt="company logo" 
+              // src={logo} 
+              src='/assets/logo.svg'/>
             </Button>
             {matches ? drawer : tabs}
           </Toolbar>

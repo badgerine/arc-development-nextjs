@@ -113,16 +113,28 @@ export default (props) => {
           </Grid>
         </Grid>
       </Hidden>
-      <img className={classes.adornment} alt='black decorative slash' src={footerAdornment} />
+      <img className={classes.adornment} alt='black decorative slash'
+        // src={footerAdornment} 
+        src='/assets/footerAdornment.svg'
+      />
       <Grid container justify='flex-end' spacing={2} className={classes.socialContainer}>
         <Grid item component={'a'} href='http://www.facebook.com' rel='noopener noreferrer' target='_blank'>
-          <img alt='facebook logo' src={facebook} className={classes.icon} />
+          <img alt='facebook logo'
+            // src={facebook} 
+            src='/assets/facebook.svg'
+            className={classes.icon} />
         </Grid>
         <Grid item component={'a'} href='http://www.twitter.com' rel='noopener noreferrer' target='_blank'>
-          <img alt='twitter logo' src={twitter} className={classes.icon} />
+          <img alt='twitter logo'
+            // src={twitter} 
+            src='/assets/twitter.svg'
+            className={classes.icon} />
         </Grid>
         <Grid item component={'a'} href='http://www.instagram.com' rel='noopener noreferrer' target='_blank'>
-          <img alt='instagram logo' src={instagram} className={classes.icon} />
+          <img alt='instagram logo'
+            // src={instagram} 
+            src='/assets/instagram.svg'
+            className={classes.icon} />
         </Grid >
       </Grid >
     </footer >)
