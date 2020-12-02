@@ -50,6 +50,8 @@ const Services = (props) => {
         <meta name='description' key='description' content='
         Cutting-edge software, mobile app, and website development services with sleek 
         custom designs - get a free online estimate instantly!'/>
+        <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest | Services' />
+        <meta property='og:url' content='arc.com/services'/>
       </Head>
       <Grid item style={{marginLeft: matchesSM ? 0 : '5em', marginTop: matchesSM ? '1em': '2em'}}>
         <Typography variant='h2' gutterBottom align={matchesSM ? 'center' : undefined}>

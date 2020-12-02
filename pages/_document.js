@@ -14,8 +14,14 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={Theme.palette.primary.main} />
+          <meta property='og:type' content='website' />
+          <meta property='og:image' content='https://i.imgur.com/C8evBTM.png'/>
+          <meta property='og:image:type' content='image/png'/>
+          <meta property='og:image:width' content='1200'/>
+          <meta property='og:image:height' content='630'/>
+          <meta property='og:image:alt' content='company logo'/>
+          <meta name='viewport' content='minimum-scale=1, inital-scale=1, width=device-width, shrink-to-fit=no'/>
           <link rel="icon" href="/favicon.png" />
-          <link rel="apple-touch-icon" href="/logo192.png" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:100,400,400i,700|Roboto:300,400,500,700&display=swap"

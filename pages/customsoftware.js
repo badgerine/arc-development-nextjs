@@ -83,6 +83,8 @@ const CustomSoftware = (props) => {
         <meta name='description' key='description' content='
         Cutting-edge custom software development with gorgeous designs from scratch - let us optimize your business, 
         solving your problems instead of creating new ones.'/>
+        <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Custom Software Development' />
+        <meta property='og:url' content='arc.com/customsoftware'/>
       </Head>
       <Grid item container direction='row'
         justify={matchesMD ? 'center' : undefined}

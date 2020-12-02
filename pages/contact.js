@@ -165,6 +165,8 @@ const Contact = (props) => {
         <meta name='description' key='description' content='
         Let us guide you through the software design and development process. Send us a message with 
         any of your ideas or questions to get started!'/>
+        <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Contact Us' />
+        <meta property='og:url' content='arc.com/contact'/>
       </Head>
       {/*---layout container - contact form---*/}
       <Grid item container lg={4} xl={3} justify='center' alignItems='center'

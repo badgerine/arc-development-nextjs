@@ -50,6 +50,8 @@ const Revolution = (props) => {
         Visionary insights, coupled with cutting-edge technology, 
         is a recipe for revolution. Get a free online estimate instantly!'/>
       </Head>
+      <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest | The Revolution' />
+      <meta property='og:url' content='arc.com/revolution'/>
       {/*----layout container - the revolution title----*/}
       <Grid item className={classes.rowContainer} style={{ marginLeft: matchesMD ? 0 : '5em', marginTop: matchesSM ? '1em' : '2em' }}>
         <Typography variant='h2' style={{ fontFamily: 'Pacifico' }} align={matchesMD ? 'center' : undefined}>

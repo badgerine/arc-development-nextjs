@@ -141,6 +141,11 @@ export default (props) => {
     <Grid container direction='column' className={classes.mainContainer}>
       <Head>
         <title key='title'>Custom Software, Mobile Apps, and Websites | Arc Development</title>
+        <meta name='description' key='description' content='
+        Pristine software, custom-designed from the ground up with cutting -edge optimizations. 
+        Use our free estimate calculator to check your project cost.'/>
+        <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Arc Development' />
+        <meta property='og:url' content='arc.com'/>
       </Head>
       <Grid item> {/*----Hero Block----*/}
         <Grid container justify='flex-end' alignItems='center' direction='row'>

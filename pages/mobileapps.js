@@ -54,7 +54,9 @@ const MobileApps = (props) => {
         <title key='title'>iOS/Android App Design & Development | Arc Development</title>
         <meta name='description' key='description' content='
         Mobile Apps Made Easy | Our cutting-edge mobile app development process lets us build beautifully designed, 
-        carefully crafted apps for both iOS and Android.  '/>
+        carefully crafted apps for both iOS and Android.'/>
+        <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest | iOS/Android App Development' />
+        <meta property='og:url' content='arc.com/mobileapps'/>
       </Head>
       {/*1st layout container*/}
       <Grid item container direction='row'
