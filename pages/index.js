@@ -179,7 +179,7 @@ export default (props) => {
               variant='outlined'
               className={classes.learnButton}
               component={Link} href='/customsoftware'
-              onClick={() => { props.setValue(1); props.setSelectedIndex(1)}}>
+              onClick={() => { props.setValue(1); props.setSelectedIndex(1) }}>
               <span style={{ marginRight: 10 }}>Learn More</span>
               <ButtonArrow width={10} height={10} fill={theme.palette.common.arcBlue} />
             </Button>
@@ -189,34 +189,36 @@ export default (props) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item> {/*----iOS/Android Block----*/}
-        <Grid container direction='row' justify={matchesSM ? 'center' : 'flex-end'} className={classes.serviceContainer}>
-          <Grid item style={{ textAlign: matchesSM ? 'center' : undefined }}>
-            <Typography variant='h4'>
-              iOS/Android App Development
+      {/* <Grid item>  */}
+      {/*----iOS/Android Block----*/}
+      {/* <Grid container direction='row' justify={matchesSM ? 'center' : 'flex-end'} className={classes.serviceContainer}> */}
+      <Grid item container direction='row' justify='flex-end' style={{ justifyContent: matchesSM ? 'center' : 'flex-end' }} className={classes.serviceContainer} >
+        <Grid item style={{ textAlign: matchesSM ? 'center' : undefined }}>
+          <Typography variant='h4'>
+            iOS/Android App Development
             </Typography>
-            <Typography variant='subtitle1' className={classes.subtitle}>
-              Extend Functionality. Extend Access. Increase Engagement.
+          <Typography variant='subtitle1' className={classes.subtitle}>
+            Extend Functionality. Extend Access. Increase Engagement.
             </Typography>
-            <Typography variant='subtitle1'>
-              Integrate your web experience or create a standalone app
+          <Typography variant='subtitle1'>
+            Integrate your web experience or create a standalone app
               {matchesSM ? ' ' : <br />}with either mobile platform.
             </Typography>
-            <Button
-              variant='outlined'
-              className={classes.learnButton}
-              component={Link}
-              href='/mobileapps'
-              onClick={() => { props.setValue(1); props.setSelectedIndex(2); }}>
-              >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow width={10} height={10} fill={theme.palette.common.arcBlue} />
-            </Button>
-          </Grid>
-          <Grid item style={{ marginRight: matchesSM ? 0 : '5em' }} >
-            <img className={classes.icon} alt='mobile device icon' src='/assets/mobileIcon.svg' />
-          </Grid>
+          <Button
+            variant='outlined'
+            className={classes.learnButton}
+            component={Link}
+            href='/mobileapps'
+            onClick={() => { props.setValue(1); props.setSelectedIndex(2); }}
+          >
+            <span style={{ marginRight: 10 }}>Learn More</span>
+            <ButtonArrow width={10} height={10} fill={theme.palette.common.arcBlue} />
+          </Button>
         </Grid>
+        <Grid item style={{ marginRight: matchesSM ? 0 : '5em' }} >
+          <img className={classes.icon} alt='mobile device icon' src='/assets/mobileIcon.svg' />
+        </Grid>
+        {/* </Grid> */}
       </Grid>
       <Grid item> {/*----Website Development Block----*/}
         <Grid container direction='row' justify={matchesSM ? 'center' : undefined} className={classes.serviceContainer}>
@@ -247,7 +249,7 @@ export default (props) => {
         </Grid>
       </Grid>
       <Grid item>{/*----The Revolution Block----*/}
-        <Grid container alignItems='center' justify='center' style={{ height: '100em', marginTop: '12em' }}>
+        <Grid container alignItems='center' justify='center' style={{ justifyContent: 'center', height: '100em', marginTop: '12em' }}>
           <Card className={classes.revolutionCard}>
             <CardContent>
               <Grid direction='column' style={{ textAlign: 'center' }}>
@@ -285,7 +287,7 @@ export default (props) => {
                 container
                 direction='column'
                 alignItems={matchesXS ? 'center' : 'inherit'}
-                style={{marginBottom: matchesXS ? '10em' : 0}}
+                style={{ marginBottom: matchesXS ? '10em' : 0 }}
               >
                 <Typography variant='h2' style={{ color: 'white' }}>
                   About Us

@@ -5,15 +5,13 @@ import { useScrollTrigger, IconButton } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Tab, Tabs } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+import Link from '../Link';
 import { Menu, MenuItem } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
 import { List, ListItem, ListItemText } from '@material-ui/core';
-
-import logo from '../assets/logo.svg';
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
@@ -184,11 +182,11 @@ export default function Header(props) {
     <React.Fragment>
       <Tabs value={props.value} onChange={handleChange} className={classes.tabContainer} indicatorColor='primary'>
         {routes.map((route, index) => (
-          <Tab key={route + index} className={classes.tab} component={Link} to={route.link} label={route.name}
+          <Tab key={route + index} className={classes.tab} component={Link} href={route.link} label={route.name}
             aria-owns={route.ariaOwns} aria-haspopup={route.ariaPopup} onMouseOver={route.mouseOver} />
         ))}
       </Tabs>
-      <Button variant="contained" color='secondary' className={classes.button} component={Link} to='/estimate' onClick={() => props.setValue(5)}>
+      <Button variant="contained" color='secondary' className={classes.button} component={Link} href='/estimate' onClick={() => props.setValue(5)}>
         Free Estimate
       </Button>
       <Menu
@@ -214,7 +212,7 @@ export default function Header(props) {
             }}
             selected={props.value === 1 && index === props.selectedIndex}
             component={Link}
-            to={item.link} >{item.name}</MenuItem>
+            href={item.link} >{item.name}</MenuItem>
         ))}
       </Menu>
     </React.Fragment>
@@ -223,7 +221,7 @@ export default function Header(props) {
   const drawerItems = routes.map(option => (
     <ListItem key={option.name} onClick={() => { setOpenDrawer(false); props.setValue(option.activeValue) }}
       divider button component={Link}
-      to={option.link} selected={props.value === option.activeValue}
+      href={option.link} selected={props.value === option.activeValue}
       className={option.specificClass} classes={{ selected: classes.drawerItemSelected }}
     >
       <ListItemText
@@ -251,7 +249,7 @@ export default function Header(props) {
       <ElevationScroll>
         <AppBar position='fixed' className={classes.appBar}>
           <Toolbar disableGutters>
-            <Button disableRipple component={Link} to='/' className={classes.logoContainer} onClick={() => props.setValue(0)}>
+            <Button disableRipple component={Link} href='/' className={classes.logoContainer} onClick={() => props.setValue(0)}>
               <img className={classes.logo} alt="company logo" 
               // src={logo} 
               src='/assets/logo.svg'/>
