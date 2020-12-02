@@ -14,12 +14,14 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={Theme.palette.primary.main} />
+          <link rel="icon" href="/favicon.png" />
+          <link rel="apple-touch-icon" href="/logo192.png" />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:100,400,400i,700|Roboto:300,400,500,700&display=swap"
           />
         </Head>
-        <body>
+        <body style={{margin: 0}}>
           <Main />
           <NextScript />
         </body>

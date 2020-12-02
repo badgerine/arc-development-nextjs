@@ -659,7 +659,7 @@ const Estimate = (props) => {
     <Grid container direction='column' style={{ marginTop: '14em' }}>
       <Grid item container align='center'>
         <Grid item xs={2}>
-          <img '/assets/check.svg' alt='checkmark' />
+          <img src='/assets/check.svg' alt='checkmark' />
         </Grid>
         <Grid item xs={10}>
           <Typography variant='body1'>

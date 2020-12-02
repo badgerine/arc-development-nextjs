@@ -12,6 +12,7 @@ import { useTheme } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
 import { List, ListItem, ListItemText } from '@material-ui/core';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
@@ -118,7 +119,7 @@ export default function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -142,7 +143,7 @@ export default function Header(props) {
     { name: 'iOS/Android Development', link: '/mobileapps', activeValue: 1, activeIndex: 2 },
     { name: 'Website Development', link: '/websites', activeValue: 1, activeIndex: 3 }];
 
-    const { value, selectedIndex, setValue, setSelectedIndex } = props;
+  const { value, selectedIndex, setValue, setSelectedIndex } = props;
   useEffect(() => {
     [...routes, ...serviceMenuOptions].forEach(route => {
       if (route.link === window.location.pathname) {
@@ -152,7 +153,7 @@ export default function Header(props) {
             setSelectedIndex(route.activeIndex);
           }
         }
-      } else if(window.location.pathname === '/estimate'){
+      } else if (window.location.pathname === '/estimate' && props.value !== 5) {
         setValue(5);
       }
     })
@@ -186,7 +187,9 @@ export default function Header(props) {
             aria-owns={route.ariaOwns} aria-haspopup={route.ariaPopup} onMouseOver={route.mouseOver} />
         ))}
       </Tabs>
-      <Button variant="contained" color='secondary' className={classes.button} component={Link} href='/estimate' onClick={() => props.setValue(5)}>
+      <Button variant="contained" color='secondary' className={classes.button} component={Link} href='/estimate'
+        onClick={() => props.setValue(5)} noWrap
+      >
         Free Estimate
       </Button>
       <Menu
@@ -250,11 +253,16 @@ export default function Header(props) {
         <AppBar position='fixed' className={classes.appBar}>
           <Toolbar disableGutters>
             <Button disableRipple component={Link} href='/' className={classes.logoContainer} onClick={() => props.setValue(0)}>
-              <img className={classes.logo} alt="company logo" 
-              // src={logo} 
-              src='/assets/logo.svg'/>
+              <img className={classes.logo} alt="company logo"
+                // src={logo} 
+                src='/assets/logo.svg' />
             </Button>
-            {matches ? drawer : tabs}
+            <Hidden mdDown>
+              {tabs}
+            </Hidden>
+            <Hidden lgUp>
+              {drawer}
+            </Hidden>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

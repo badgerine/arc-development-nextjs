@@ -135,7 +135,7 @@ const About = (props) => {
           </Typography>
         </Grid>
         <Grid item >
-          <Avatar alt='founder' src='/assets/founder.svg' className={classes.avatar} />
+          <Avatar alt='founder' src='/assets/founder.jpg' className={classes.avatar} />
         </Grid>
         {/*----team block - endorsements----*/}
         <Grid item container justify={matchesMD ? 'center' : undefined}>

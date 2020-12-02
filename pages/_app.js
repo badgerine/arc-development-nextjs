@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { CacheProvider } from '@emotion/react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
 import Theme from '../src/ui/Theme.js';
 import Header from '../src/ui/Header';
@@ -31,8 +30,6 @@ export default function MyApp(props) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={Theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
         <Header value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
         <Component {...pageProps} setValue={setValue} setSelectedIndex={setSelectedIndex} />
         <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
