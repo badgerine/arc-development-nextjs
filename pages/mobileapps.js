@@ -52,6 +52,9 @@ const MobileApps = (props) => {
     <Grid container direction='column'>
       <Head>
         <title key='title'>iOS/Android App Design & Development | Arc Development</title>
+        <meta name='description' key='description' content='
+        Mobile Apps Made Easy | Our cutting-edge mobile app development process lets us build beautifully designed, 
+        carefully crafted apps for both iOS and Android.  '/>
       </Head>
       {/*1st layout container*/}
       <Grid item container direction='row'

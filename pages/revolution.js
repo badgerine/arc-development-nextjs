@@ -46,6 +46,9 @@ const Revolution = (props) => {
     <Grid container direction='column'>
       <Head>
         <title key='title'>The Revolution - Cutting Edge Software | Arc Development</title>
+        <meta name='description' key='description' content='
+        Visionary insights, coupled with cutting-edge technology, 
+        is a recipe for revolution. Get a free online estimate instantly!'/>
       </Head>
       {/*----layout container - the revolution title----*/}
       <Grid item className={classes.rowContainer} style={{ marginLeft: matchesMD ? 0 : '5em', marginTop: matchesSM ? '1em' : '2em' }}>

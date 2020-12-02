@@ -50,6 +50,9 @@ const Websites = (props) => {
     <Grid container direction='column'>
       <Head>
         <title key='title'>Stunning Custom Website Design| Arc Development</title>
+        <meta name='description' key='description' content='
+        Completely custom designed and built from scratch to be blazing fast.
+        Optimized code, server rendering, and perfect responsive design | 99% PageSpeed Score'/>
       </Head>
       {/*1st layout container - website development*/}
       <Grid item container direction='row'

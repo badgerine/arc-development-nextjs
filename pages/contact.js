@@ -162,6 +162,9 @@ const Contact = (props) => {
     <Grid container direction='row'>
       <Head>
         <title key='title'>Contact Us | Arc Development</title>
+        <meta name='description' key='description' content='
+        Let us guide you through the software design and development process. Send us a message with 
+        any of your ideas or questions to get started!'/>
       </Head>
       {/*---layout container - contact form---*/}
       <Grid item container lg={4} xl={3} justify='center' alignItems='center'
