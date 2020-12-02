@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Lottie from 'react-lottie';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -43,6 +44,9 @@ const Revolution = (props) => {
 
   return (
     <Grid container direction='column'>
+      <Head>
+        <title key='title'>The Revolution - Cutting Edge Software | Arc Development</title>
+      </Head>
       {/*----layout container - the revolution title----*/}
       <Grid item className={classes.rowContainer} style={{ marginLeft: matchesMD ? 0 : '5em', marginTop: matchesSM ? '1em' : '2em' }}>
         <Typography variant='h2' style={{ fontFamily: 'Pacifico' }} align={matchesMD ? 'center' : undefined}>

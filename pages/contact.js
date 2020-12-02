@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import axios from 'axios';
 import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -159,6 +160,9 @@ const Contact = (props) => {
 
   return (
     <Grid container direction='row'>
+      <Head>
+        <title key='title'>Contact Us | Arc Development</title>
+      </Head>
       {/*---layout container - contact form---*/}
       <Grid item container lg={4} xl={3} justify='center' alignItems='center'
         style={{ marginBottom: matchesMD ? '5em' : 0, marginTop: matchesSM ? '1em' : matchesMD ? '5em' : 0 }}

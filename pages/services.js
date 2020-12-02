@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -44,6 +45,9 @@ const Services = (props) => {
 
   return (
     <Grid container direction='column'>
+      <Head>
+        <title key='title'>Top Custom Software Development Services | Arc Development</title>
+      </Head>
       <Grid item style={{marginLeft: matchesSM ? 0 : '5em', marginTop: matchesSM ? '1em': '2em'}}>
         <Typography variant='h2' gutterBottom align={matchesSM ? 'center' : undefined}>
           Services

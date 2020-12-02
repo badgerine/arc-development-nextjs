@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Lottie from 'react-lottie';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -138,6 +139,9 @@ export default (props) => {
 
   return (
     <Grid container direction='column' className={classes.mainContainer}>
+      <Head>
+        <title key='title'>Custom Software, Mobile Apps, and Websites | Arc Development</title>
+      </Head>
       <Grid item> {/*----Hero Block----*/}
         <Grid container justify='flex-end' alignItems='center' direction='row'>
           <Grid sm item className={classes.heroTextContainer}>
