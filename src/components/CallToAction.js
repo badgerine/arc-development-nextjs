@@ -65,7 +65,7 @@ const CallToAction = (props) => {
       <Grid item style={{ marginLeft: matchesSM ? 0 : '5em', textAlign: matchesSM ? 'center' : 'inherit' }}>
         <Grid container direction='column'>
           <Grid item>
-            <Typography variant='h2'>
+            <Typography variant='h1'>
               Simple Software.<br />Revolutionay Results.
             </Typography>
             <Typography variant='subtitle2' style={{ fontSize: '1.5rem' }}>

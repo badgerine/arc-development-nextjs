@@ -132,7 +132,13 @@ const MobileApps = (props) => {
         </Grid>
         {/* mobile animation container*/}
         <Grid item md>
-          <Lottie options={defaultOptions} style={{ maxWidth: '20em', marginBottom: matchesMD ? '10em' : 0 }} />
+          <Lottie options={defaultOptions} 
+          style={{ 
+            // height: matchesMD ? '20em' : undefined,
+            maxWidth: matchesMD ? '10em' : '20em',
+            maxHeight: matchesMD ? '10em' : '20em', 
+            marginBottom: matchesMD ? '10em' : 0 
+            }} />
         </Grid>
         {/* simultaneous platform container*/}
         <Grid item container direction='column' md>
@@ -155,7 +161,7 @@ const MobileApps = (props) => {
         direction={matchesMD ? 'column' : 'row'}
         justify={matchesMD ? 'center' : undefined}
         className={classes.rowContainer}
-        style={{ marginBottom: '15em' }}
+        style={{ marginBottom: '15em', display: 'grid' }}
       >
         {/* extend functionality container */}
         <Grid item container direction='column' md alignItems='center'>
