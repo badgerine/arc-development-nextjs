@@ -679,6 +679,8 @@ const Estimate = (props) => {
         Use our free online estimate calculator to instantly check the cost of your 
         custom software, mobile app, or website design and development project!'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Free Estimate' />
+        <meta property='og:url' key='og:url' content='arc.com/estimate'/>
+        <link rel='canonical' key='canonical' href='https://arc.com/estimate' />
       </Head>
       <Grid item container direction='column' lg
         alignItems={matchesMD ? 'center' : undefined}

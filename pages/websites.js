@@ -55,7 +55,8 @@ const Websites = (props) => {
         Optimized code, server rendering, and perfect responsive design | 99% PageSpeed Score'/>
       </Head>
       <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest | Websites' />
-      <meta property='og:url' content='arc.com/websites'/>
+      <meta property='og:url' key='og:url' content='arc.com/websites'/>
+      <link rel='canonical' key='canonical' href='https://arc.com/websites' />
       {/*1st layout container - website development*/}
       <Grid item container direction='row'
         justify={matchesMD ? 'center' : undefined}

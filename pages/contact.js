@@ -167,6 +167,7 @@ const Contact = (props) => {
         any of your ideas or questions to get started!'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Contact Us' />
         <meta property='og:url' content='arc.com/contact'/>
+        <link rel='canonical' key='canonical' href='https://arc.com/contact' />
       </Head>
       {/*---layout container - contact form---*/}
       <Grid item container lg={4} xl={3} justify='center' alignItems='center'

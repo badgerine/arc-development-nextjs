@@ -51,7 +51,8 @@ const Services = (props) => {
         Cutting-edge software, mobile app, and website development services with sleek 
         custom designs - get a free online estimate instantly!'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest | Services' />
-        <meta property='og:url' content='arc.com/services'/>
+        <meta property='og:url' key='og:url' content='arc.com/services'/>
+        <link rel='canonical' key='canonical' href='https://arc.com/services' />
       </Head>
       <Grid item style={{marginLeft: matchesSM ? 0 : '5em', marginTop: matchesSM ? '1em': '2em'}}>
         <Typography variant='h2' gutterBottom align={matchesSM ? 'center' : undefined}>

@@ -145,7 +145,8 @@ export default (props) => {
         Pristine software, custom-designed from the ground up with cutting -edge optimizations. 
         Use our free estimate calculator to check your project cost.'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Arc Development' />
-        <meta property='og:url' content='arc.com'/>
+        <meta property='og:url' key='og:url' content='arc.com'/>
+        <link rel='canonical' key='canonical' href='https://arc.com' />
       </Head>
       <Grid item> {/*----Hero Block----*/}
         <Grid container justify='flex-end' alignItems='center' direction='row'>
