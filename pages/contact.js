@@ -176,7 +176,7 @@ const Contact = (props) => {
         <Grid item direction='column' >
           {/*---contact form - title and intro---*/}
           <Grid item>
-            <Typography variant='h2' gutterBottom
+            <Typography variant='h1' gutterBottom
               style={{ lineHeight: 1 }}
               align={matchesMD ? 'center' : undefined}
             >
@@ -374,7 +374,7 @@ const Contact = (props) => {
         <Grid item style={{ marginLeft: matchesMD ? 0 : '3em', textAlign: matchesMD ? 'center' : 'inherit' }}>
           <Grid container direction='column'>
             <Grid item>
-              <Typography variant='h2' align={matchesMD ? 'center' : undefined}>
+              <Typography variant='h1' align={matchesMD ? 'center' : undefined}>
                 Simple Software.<br />Revolutionay Results.
               </Typography>
               <Typography variant='subtitle2' align={matchesMD ? 'center' : undefined} style={{ fontSize: '1.5rem' }}>

@@ -60,7 +60,7 @@ const About = (props) => {
         className={classes.rowContainer}
         style={{ marginTop: matchesSM ? '1em' : '2em' }}
       >
-        <Typography variant='h2' gutterBottom align={matchesMD ? 'center' : undefined}>
+        <Typography variant='h1' gutterBottom align={matchesMD ? 'center' : undefined}>
           About Us
         </Typography>
       </Grid>

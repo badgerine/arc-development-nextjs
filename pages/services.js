@@ -55,7 +55,7 @@ const Services = (props) => {
         <link rel='canonical' key='canonical' href='https://arc.com/services' />
       </Head>
       <Grid item style={{marginLeft: matchesSM ? 0 : '5em', marginTop: matchesSM ? '1em': '2em'}}>
-        <Typography variant='h2' gutterBottom align={matchesSM ? 'center' : undefined}>
+        <Typography variant='h1' gutterBottom align={matchesSM ? 'center' : undefined}>
           Services
         </Typography>
       </Grid>
@@ -159,7 +159,7 @@ const Services = (props) => {
               className={classes.icon}
               style={{ marginRight: matchesSM ? 0 : '5em' }}
               alt='website development icon'
-              src={websitesIcon}
+              src='/assets/websites.svg'
               width='250em'
             />
           </Grid>

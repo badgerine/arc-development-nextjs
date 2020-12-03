@@ -55,7 +55,7 @@ const Revolution = (props) => {
       <link rel='canonical' key='canonical' href='https://arc.com/revolution' />
       {/*----layout container - the revolution title----*/}
       <Grid item className={classes.rowContainer} style={{ marginLeft: matchesMD ? 0 : '5em', marginTop: matchesSM ? '1em' : '2em' }}>
-        <Typography variant='h2' style={{ fontFamily: 'Pacifico' }} align={matchesMD ? 'center' : undefined}>
+        <Typography variant='h1' style={{ fontFamily: 'Pacifico' }} align={matchesMD ? 'center' : undefined}>
           The Revolution
         </Typography>
       </Grid>

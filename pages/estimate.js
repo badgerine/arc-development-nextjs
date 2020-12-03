@@ -686,7 +686,7 @@ const Estimate = (props) => {
         alignItems={matchesMD ? 'center' : undefined}
       >
         <Grid item style={{ marginTop: '2em', marginLeft: matchesMD ? 0 : '5em' }}>
-          <Typography variant='h2' align={matchesMD ? 'center' : undefined}>
+          <Typography variant='h1' align={matchesMD ? 'center' : undefined}>
             Estimate
           </Typography>
         </Grid>
@@ -701,7 +701,7 @@ const Estimate = (props) => {
         {questions.filter(question => question.active).map((question, index) => (
           <React.Fragment key={index}>
             <Grid item>
-              <Typography variant='h2' align='center'
+              <Typography variant='h1' align='center'
                 style={{
                   fontWeight: 500,
                   fontSize: '2.25rem',
@@ -782,7 +782,7 @@ const Estimate = (props) => {
       >
         <Grid container justify='center'>
           <Grid item style={{ marginTop: '1em', marginBottom: '1em' }}>
-            <Typography variant='h2' align='center'>
+            <Typography variant='h1' align='center'>
               Estimate
             </Typography>
           </Grid>

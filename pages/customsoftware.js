@@ -105,7 +105,7 @@ const CustomSoftware = (props) => {
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography align={matchesMD ? 'center' : undefined} variant='h2'>Custom Software Development</Typography>
+            <Typography align={matchesMD ? 'center' : undefined} variant='h1'>Custom Software Development</Typography>
           </Grid>
           <Grid item>
             <Typography align={matchesMD ? 'center' : undefined} variant='body1' paragraph>

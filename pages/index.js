@@ -151,7 +151,7 @@ export default (props) => {
       <Grid item> {/*----Hero Block----*/}
         <Grid container justify='flex-end' alignItems='center' direction='row'>
           <Grid sm item className={classes.heroTextContainer}>
-            <Typography align='center' variant='h2'>
+            <Typography align='center' variant='h1'>
               Bringing West Coast Technology<br />to the Midwest
             </Typography>
             <Grid container justify='center' className={classes.buttonContainer}>
@@ -254,7 +254,7 @@ export default (props) => {
             </Button>
           </Grid>
           <Grid item>
-            <img className={classes.icon} alt='website development icon' src='/assets/website.svg' />
+            <img className={classes.icon} alt='website development icon' src='/assets/websiteIcon.svg' />
           </Grid>
         </Grid>
       </Grid>
@@ -299,7 +299,7 @@ export default (props) => {
                 alignItems={matchesXS ? 'center' : 'inherit'}
                 style={{ marginBottom: matchesXS ? '10em' : 0 }}
               >
-                <Typography variant='h2' style={{ color: 'white' }}>
+                <Typography variant='h1' style={{ color: 'white' }}>
                   About Us
               </Typography>
                 <Typography variant='subtitle2'>
@@ -322,7 +322,7 @@ export default (props) => {
             {/* <Grid item sm style={{ marginRight: '5em', textAlign: 'right' }}> */}
             <Grid item sm style={{ marginRight: matchesXS ? 0 : matchesSM ? '2em' : '5em' }}>
               <Grid container direction='column' alignItems={matchesXS ? 'center' : 'flex-end'} >
-                <Typography variant='h2' style={{ color: 'white' }}>
+                <Typography variant='h1' style={{ color: 'white' }}>
                   Contact Us
               </Typography>
                 <Typography variant='subtitle2'>

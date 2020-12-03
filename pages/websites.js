@@ -78,7 +78,7 @@ const Websites = (props) => {
         {/*website dev intro */}
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography align={matchesMD ? 'center' : undefined} variant='h2'>Website Development</Typography>
+            <Typography align={matchesMD ? 'center' : undefined} variant='h1'>Website Development</Typography>
           </Grid>
           <Grid item>
             <Typography align={matchesMD ? 'center' : undefined} variant='body1' paragraph>
