@@ -64,7 +64,7 @@ const Revolution = (props) => {
         className={classes.rowContainer}
         style={{ marginTop: '5em' }}
       >
-        <Grid item >
+        <Grid item lg >
           <img src='/assets/vision.svg' alt='mountain through binoculars'
             style={{
               marginRight: matchesMD ? 0 : '5em',
@@ -72,7 +72,7 @@ const Revolution = (props) => {
               maxWidth: matchesSM ? '300px' : '40em'
             }} />
         </Grid>
-        <Grid item container direction='column' className={classes.itemContainer}>
+        <Grid item container direction='column' className={classes.itemContainer} lg>
           <Grid item>
             <Typography variant='h4' gutterBottom align={matchesMD ? 'center' : 'right'}>
               Vision
