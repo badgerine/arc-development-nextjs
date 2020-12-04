@@ -192,7 +192,7 @@ const Contact = (props) => {
           {/*---contact form - contact info---*/}
           <Grid item container style={{ marginTop: '2em' }}>
             <Grid item>
-              <img src='/assets/phoneIcon.svg' alt='phone' style={{ marginRight: '0.5em' }} />
+              <img src='/assets/phone.svg' alt='phone' style={{ marginRight: '0.5em' }} />
             </Grid>
             <Grid item>
               <Typography variant='body1' style={{ color: theme.palette.common.arcBlue, fontSize: '1rem' }}>
@@ -202,7 +202,7 @@ const Contact = (props) => {
           </Grid>
           <Grid item container style={{ marginBottom: '2em' }}>
             <Grid item>
-              <img src='/assets/emailIcon.svg' alt='envelope' style={{ marginRight: '0.5em', verticalAlign: 'bottom' }} />
+              <img src='/assets/email.svg' alt='envelope' style={{ marginRight: '0.5em', verticalAlign: 'bottom' }} />
             </Grid>
             <Grid item>
               <Typography variant='body1' style={{ color: theme.palette.common.arcBlue, fontSize: '1rem' }}>

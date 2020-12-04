@@ -159,7 +159,7 @@ const Services = (props) => {
               className={classes.icon}
               style={{ marginRight: matchesSM ? 0 : '5em' }}
               alt='website development icon'
-              src='/assets/websites.svg'
+              src='/assets/websiteIcon.svg'
               width='250em'
             />
           </Grid>

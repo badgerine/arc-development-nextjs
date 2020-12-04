@@ -84,8 +84,8 @@ const CustomSoftware = (props) => {
         Cutting-edge custom software development with gorgeous designs from scratch - let us optimize your business, 
         solving your problems instead of creating new ones.'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Custom Software Development' />
-        <meta property='og:url' key='og:url' content='arc.com/customsoftware'/>
-        <link rel='canonical' key='canonical' href='https://arc.com/customsoftware' />
+        <meta property='og:url' key='og:url' content='arc.com/customsoftware' />
+        <link rel='canonical' key='canonical' href='https://  arc.com/customsoftware' />
       </Head>
       <Grid item container direction='row'
         justify={matchesMD ? 'center' : undefined}
@@ -184,13 +184,14 @@ const CustomSoftware = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item container justify='space-between'
+      <Grid item container justify={matchesMD ? 'center' : 'space-around'}
         direction={matchesMD ? 'column' : 'row'}
         alignItems={matchesMD ? 'center' : undefined}
         className={classes.rowContainer}
+        style={{ display: matchesMD ? 'grid' : undefined }}
       >
         <Grid item container md
-          direction={matchesSM ? 'column' : 'row'}
+          direction={matchesMD ? 'column' : 'row'}
           className={classes.itemContainer}
           style={{ marginBottom: matchesMD ? '15em' : 0 }}
         >
@@ -220,7 +221,7 @@ const CustomSoftware = (props) => {
           </Grid>
         </Grid>
         <Grid item container md
-          direction={matchesSM ? 'column' : 'row'}
+          direction={matchesMD ? 'column' : 'row'}
           className={classes.itemContainer}
         >
           <Grid item md>
@@ -262,15 +263,16 @@ const CustomSoftware = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item container justify='space-around'
+      <Grid item container
         direction={matchesMD ? 'column' : 'row'}
+        justify={matchesMD ? 'center' : 'space-around'}
         alignItems={matchesMD ? 'center' : undefined}
-        style={{ marginTop: '20em', marginBottom: '20em' }}
+        style={{ marginTop: '20em', marginBottom: '20em', display: matchesMD ? 'grid' : undefined }}
         className={classes.rowContainer}
       >
         <Grid item container md
           className={classes.itemContainer}
-          direction={matchesSM ? 'column' : 'row'}
+          direction={matchesMD ? 'column' : 'row'}
           style={{ marginBottom: matchesMD ? '15em' : 0 }}>
           <Grid item container direction='column' md>
             <Grid item>
@@ -287,7 +289,7 @@ const CustomSoftware = (props) => {
               <Typography variant='body1' paragraph align={matchesMD ? 'center' : undefined}>
                 Increasing efficiency increases profits,
                 leaving you more time to focus on your business, not busywork.
-            </Typography>
+              </Typography>
             </Grid>
           </Grid>
           <Grid item md>
@@ -296,7 +298,7 @@ const CustomSoftware = (props) => {
         </Grid>
         <Grid item container md
           className={classes.itemContainer}
-          direction={matchesSM ? 'column' : 'row'}
+          direction={matchesMD ? 'column' : 'row'}
         >
           <Grid item md>
             <Lottie options={uxOptions} style={{ maxHeight: 310, maxWidth: 155 }} />

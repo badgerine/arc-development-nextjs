@@ -161,7 +161,7 @@ const MobileApps = (props) => {
         direction={matchesMD ? 'column' : 'row'}
         justify={matchesMD ? 'center' : undefined}
         className={classes.rowContainer}
-        style={{ marginBottom: '15em', display: 'grid' }}
+        style={{ marginBottom: '15em', display: matchesMD ? 'grid' : undefined }}
       >
         {/* extend functionality container */}
         <Grid item container direction='column' md alignItems='center'>
