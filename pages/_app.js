@@ -9,10 +9,6 @@ import Theme from '../src/ui/Theme.js';
 import Header from '../src/ui/Header';
 import Footer from '../src/ui/Footer';
 
-import * as analytics from '../scripts/analytics';
-
-// ReactGA.initialize('G-MR93H92LJR', { debug: true });
-
 export const cache = createCache({ key: 'css' });
 
 export default function MyApp(props) {
@@ -20,8 +16,9 @@ export default function MyApp(props) {
   const [value, setValue] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  ReactGA.initialize('G-MR93H92LJR');
+
   React.useEffect(() => {
-    analytics.initGA();
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
@@ -32,7 +29,23 @@ export default function MyApp(props) {
   return (
     <CacheProvider value={cache}>
       <Head>
-        <title>My page</title>
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id='G-MR93H92LJR'"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MR93H92LJR');
+        `,
+          }}
+        />
+        <title>Arc Development</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={Theme}>

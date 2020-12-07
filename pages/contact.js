@@ -123,6 +123,9 @@ const Contact = (props) => {
 
   const onConfirmHandler = () => {
     setLoading(true);
+    window.gtag("event", "Sent Message", {
+      event_category: "Message",
+    });
     axios.get('https://us-central1-material-ui-course-5c72f.cloudfunctions.net/sendMail', {
       params: {
         name: name,
@@ -154,7 +157,7 @@ const Contact = (props) => {
   const buttonContents = (
     <React.Fragment>
       Send Message
-      <img src='/assets/send.svg'alt='airplane' style={{ marginLeft: '1rem' }} />
+      <img src='/assets/send.svg' alt='airplane' style={{ marginLeft: '1rem' }} />
     </React.Fragment>
   )
 
@@ -166,7 +169,7 @@ const Contact = (props) => {
         Let us guide you through the software design and development process. Send us a message with 
         any of your ideas or questions to get started!'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Contact Us' />
-        <meta property='og:url' content='arc.com/contact'/>
+        <meta property='og:url' content='arc.com/contact' />
         <link rel='canonical' key='canonical' href='https://arc.com/contact' />
       </Head>
       {/*---layout container - contact form---*/}
@@ -399,7 +402,13 @@ const Contact = (props) => {
             variant='contained'
             className={classes.estimateButton}
             component={Link} href='/estimate'
-            onClick={() => { props.setValue(5) }}
+            onClick={() => {
+              props.setValue(5);
+              window.gtag("event", "Contact Page Pressed", {
+                event_category: "Estimate",
+                event_label: "estimate_request"
+              });
+            }}
           >
             Free Estimate
         </Button>

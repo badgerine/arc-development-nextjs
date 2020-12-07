@@ -509,6 +509,10 @@ const Estimate = (props) => {
 
   const sendEstimate = () => {
     setLoading(true);
+    window.gtag("event", "Estimate Sent", {
+      event_category: "Estimate",
+      event_label: "estimate_request"
+    });
     axios.get('https://us-central1-material-ui-course-5c72f.cloudfunctions.net/sendMail', {
       params: {
         name: name,
@@ -679,7 +683,7 @@ const Estimate = (props) => {
         Use our free online estimate calculator to instantly check the cost of your 
         custom software, mobile app, or website design and development project!'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Free Estimate' />
-        <meta property='og:url' key='og:url' content='arc.com/estimate'/>
+        <meta property='og:url' key='og:url' content='arc.com/estimate' />
         <link rel='canonical' key='canonical' href='https://arc.com/estimate' />
       </Head>
       <Grid item container direction='column' lg
@@ -768,6 +772,10 @@ const Estimate = (props) => {
               getFeatures();
               getCustomFeatures();
               getCategory();
+              window.gtag("event", "Estimate Checked", {
+                event_category: "Estimate",
+                event_label: "estimate_request"
+              });
             }}>
             Get Estimate
           </Button>

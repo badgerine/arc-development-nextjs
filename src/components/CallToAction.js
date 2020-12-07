@@ -90,7 +90,13 @@ const CallToAction = (props) => {
           variant='contained'
           className={classes.estimateButton}
           component={Link} href='/estimate'
-          onClick={() => { props.setValue(5) }}
+          onClick={() => {
+            props.setValue(5);
+            window.gtag("event", "Call To Action Pressed", {
+              event_category: "Estimate",
+              event_label: "estimate_request"
+            });
+          }}
         >
           Free Estimate
         </Button>

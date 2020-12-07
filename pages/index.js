@@ -145,7 +145,7 @@ export default (props) => {
         Pristine software, custom-designed from the ground up with cutting -edge optimizations. 
         Use our free estimate calculator to check your project cost.'/>
         <meta property='og:title' key='og:title' content='Bringing West Coast Technology to the Midwest |  Arc Development' />
-        <meta property='og:url' key='og:url' content='arc.com'/>
+        <meta property='og:url' key='og:url' content='arc.com' />
         <link rel='canonical' key='canonical' href='https://arc.com' />
       </Head>
       <Grid item> {/*----Hero Block----*/}
@@ -156,7 +156,14 @@ export default (props) => {
             </Typography>
             <Grid container justify='center' className={classes.buttonContainer}>
               <Grid item>
-                <Button className={classes.estimateButton} variant='contained' component={Link} href='/estimate' onClick={() => props.setValue(5)}>
+                <Button className={classes.estimateButton} variant='contained' component={Link} href='/estimate'
+                  onClick={() => {
+                    props.setValue(5);
+                    window.gtag("event", "Home Page Pressed", {
+                      event_category: "Estimate",
+                      event_label: "estimate_request"
+                    });
+                  }}>
                   Free Estimate
                 </Button>
               </Grid>

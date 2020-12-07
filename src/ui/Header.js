@@ -15,8 +15,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { List, ListItem, ListItemText } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 
-import * as analytics from '../../scripts/analytics';
-
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
@@ -152,13 +150,6 @@ export default function Header(props) {
   const { value, selectedIndex, setValue, setSelectedIndex } = props;
 
   useEffect(() => {
-    //configure google analytics developer testing filtering - only log page visit once per page visit
-    if (previousUrl !== window.location.pathname) {
-      setPreviousUrl(window.location.pathname);
-      console.log('should fire reactga.pageview', window.location.pathname);
-      ReactGA.pageview(window.location.pathname + window.location.search);
-      analytics.logPageView()
-    }
     [...routes, ...serviceMenuOptions].forEach(route => {
       if (route.link === window.location.pathname) {
         if (value !== route.activeValue) {
@@ -202,7 +193,13 @@ export default function Header(props) {
         ))}
       </Tabs>
       <Button variant="contained" color='secondary' className={classes.button} component={Link} href='/estimate'
-        onClick={() => props.setValue(5)} noWrap
+        onClick={() => {
+          props.setValue(5);
+          window.gtag("event", "Desktop Header Pressed", {
+            event_category: "Estimate",
+            event_label: "estimate_request"
+          });
+        }} noWrap
       >
         Free Estimate
       </Button>
@@ -241,10 +238,31 @@ export default function Header(props) {
       href={option.link} selected={props.value === option.activeValue}
       className={option.specificClass} classes={{ selected: classes.drawerItemSelected }}
     >
-      <ListItemText
-        className={classes.drawerItem}
-        disableTypography >{option.name}</ListItemText>
-    </ListItem>));
+      <ListItemText className={classes.drawerItem} disableTypography >
+        {option.name}
+      </ListItemText>
+    </ListItem>)
+  );
+
+  drawerItems[drawerItems.length] = (
+    <ListItem divider button component={Link}
+      href='/estimate' selected={props.value === 5}
+      classes={{ root: classes.drawerItemEstimate, selected: classes.drawerItemSelected }}
+      onClick={() => {
+        setOpenDrawer(false);
+        props.setValue(5);
+        window.gtag("event", "Mobile Header Pressed", {
+          event_category: "Estimate",
+          event_label: "estimate_request"
+        });
+      }}
+    >
+      <ListItemText className={classes.drawerItem} disableTypography >
+        Free Estimate
+      </ListItemText>
+    </ListItem>
+  );
+
 
   const drawer = (
     <React.Fragment>

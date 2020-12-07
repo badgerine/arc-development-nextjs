@@ -7,8 +7,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Avatar from '@material-ui/core/Avatar';
 import Hidden from '@material-ui/core/Hidden';
 
-import * as analytics from '../scripts/analytics';
-
 import CallToAction from '../src/components/CallToAction';
 
 const useStyles = makeStyles(theme => ({
