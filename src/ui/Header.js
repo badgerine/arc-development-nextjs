@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { useScrollTrigger, IconButton } from '@material-ui/core';
@@ -126,6 +127,8 @@ export default function Header(props) {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
+  const [previousUrl, setPreviousUrl] = useState('');
+
   const routes = [
     { name: 'Home', link: '/', activeValue: 0 },
     {
@@ -146,7 +149,14 @@ export default function Header(props) {
     { name: 'Website Development', link: '/websites', activeValue: 1, activeIndex: 3 }];
 
   const { value, selectedIndex, setValue, setSelectedIndex } = props;
+
   useEffect(() => {
+    //configure google analytics developer testing filtering - only log page visit once per page visit
+    if (previousUrl !== window.location.pathname) {
+      setPreviousUrl(window.location.pathname);
+      console.log('should fire reactga.pageview', window.location.pathname);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
     [...routes, ...serviceMenuOptions].forEach(route => {
       if (route.link === window.location.pathname) {
         if (value !== route.activeValue) {
@@ -255,7 +265,7 @@ export default function Header(props) {
         <AppBar position='fixed' className={classes.appBar}>
           <Toolbar disableGutters>
             <Button disableRipple component={Link} href='/' className={classes.logoContainer} onClick={() => props.setValue(0)}
-            style={{textDecoration: 'none'}}>
+              style={{ textDecoration: 'none' }}>
               <svg className={classes.logo} id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 139">
                 <style>{`.st0{fill:none}.st1{fill:#fff}.st2{font-family:Raleway; font-weight: 300;}.st6{fill:none;stroke:#000;stroke-width:3;stroke-miterlimit:10}`}</style>
                 <path d="M448.07-1l-9.62 17.24-8.36 14.96L369.93 139H-1V-1z" /><path class="st0" d="M-1 139h479.92v.01H-1z" />

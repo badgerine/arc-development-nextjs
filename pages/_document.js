@@ -20,7 +20,6 @@ export default class MyDocument extends Document {
           <meta property='og:image:width' content='1200'/>
           <meta property='og:image:height' content='630'/>
           <meta property='og:image:alt' content='company logo'/>
-          <meta name='viewport' content='minimum-scale=1, inital-scale=1, width=device-width, shrink-to-fit=no'/>
           <link rel="icon" href="/favicon.png" />
           <link
             rel="stylesheet"
