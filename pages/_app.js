@@ -9,7 +9,7 @@ import Theme from '../src/ui/Theme.js';
 import Header from '../src/ui/Header';
 import Footer from '../src/ui/Footer';
 
-ReactGA.initialize('G-MR93H92LJR');
+ReactGA.initialize('G-MR93H92LJR', {debug: true});
 
 export const cache = createCache({ key: 'css' });
 
