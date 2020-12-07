@@ -14,7 +14,8 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
 import { List, ListItem, ListItemText } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
-import { FilterNone } from '@material-ui/icons';
+
+import * as analytics from '../../scripts/analytics';
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
@@ -156,6 +157,7 @@ export default function Header(props) {
       setPreviousUrl(window.location.pathname);
       console.log('should fire reactga.pageview', window.location.pathname);
       ReactGA.pageview(window.location.pathname + window.location.search);
+      analytics.logPageView()
     }
     [...routes, ...serviceMenuOptions].forEach(route => {
       if (route.link === window.location.pathname) {

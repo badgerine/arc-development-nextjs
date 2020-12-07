@@ -9,7 +9,9 @@ import Theme from '../src/ui/Theme.js';
 import Header from '../src/ui/Header';
 import Footer from '../src/ui/Footer';
 
-ReactGA.initialize('G-MR93H92LJR', {debug: true});
+import * as analytics from '../scripts/analytics';
+
+// ReactGA.initialize('G-MR93H92LJR', { debug: true });
 
 export const cache = createCache({ key: 'css' });
 
@@ -19,6 +21,7 @@ export default function MyApp(props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   React.useEffect(() => {
+    analytics.initGA();
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
